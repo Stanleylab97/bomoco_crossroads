@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home:AnimatedSplashScreen(
-          duration: 8000,
+          duration: 6000,
           splash: Image.asset(
         "assets/images/logo.gif"),
           nextScreen: Racine(),
