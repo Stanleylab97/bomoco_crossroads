@@ -1,6 +1,6 @@
 
 import 'package:bomoco/account_tabs/abonnement.dart';
-import 'package:bomoco/account_tabs/messages.dart';
+import 'package:bomoco/account_tabs/chat/messages_Page.dart';
 import 'package:bomoco/account_tabs/operations.dart';
 import 'package:bomoco/account_tabs/profile.dart';
 import 'package:flutter/material.dart';
@@ -74,7 +74,7 @@ class _AccountState extends State<Account> {
             children: <Widget>[
               Profile(),//ff5722
               Abonnement(),//3f51b5
-              Messages(),//e91e63
+              MessagesPage(),//e91e63
               Operations(), //9c27b0
             ],
           )),

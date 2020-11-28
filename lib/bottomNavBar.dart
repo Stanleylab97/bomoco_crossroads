@@ -5,14 +5,15 @@ import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'BottomNavBar/account.dart';
+
 class Racine extends StatefulWidget {
+  static const routeName = "racine";
   @override
   _RacineState createState() => _RacineState();
 }
 
 class _RacineState extends State<Racine> {
-
-
   int currentIndex = 1;
 
   void changePage(int index) {
@@ -24,11 +25,7 @@ class _RacineState extends State<Racine> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: <Widget>[
-        Partners(),
-        HomePage(),
-        Welcome(),
-      ][currentIndex],
+      body: <Widget>[Partners(), HomePage(), Account()][currentIndex],
       bottomNavigationBar: BubbleBottomBar(
         opacity: 0,
         currentIndex: currentIndex,
@@ -76,12 +73,11 @@ class _RacineState extends State<Racine> {
                   ],
                 ),
               ),
-              activeIcon:
-                 Container(
+              activeIcon: Container(
                 height: 24,
                 width: 24,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.orange,width: 2),
+                  border: Border.all(color: Colors.orange, width: 2),
                   shape: BoxShape.circle,
                   image: DecorationImage(
                       image: AssetImage('assets/images/user.png')),
